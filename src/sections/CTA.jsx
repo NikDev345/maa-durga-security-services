@@ -9,8 +9,8 @@ export default function CTA() {
           <p className="text-xs font-black uppercase tracking-[0.3em] text-amber-300">Priority Response Channel</p>
           <h2 className="mt-4 font-display text-3xl font-black uppercase leading-tight text-white sm:text-5xl">Need Professional Security For Your Property Or Event?</h2>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Button icon={PhoneCall}>Call Now</Button>
-            <Button variant="secondary" icon={MessageCircle}>WhatsApp Inquiry</Button>
+            <Button icon={PhoneCall} href="tel:+919898892210">Call Now</Button>
+            <Button variant="secondary" icon={MessageCircle} href="https://wa.me/919898892210" target="_blank">WhatsApp Inquiry</Button>
           </div>
         </div>
       </div>

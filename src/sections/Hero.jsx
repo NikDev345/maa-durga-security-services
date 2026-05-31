@@ -26,7 +26,7 @@ export default function Hero() {
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <Button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}>Get Free Consultation</Button>
-            <Button variant="secondary" icon={Phone} href="tel:+91-9898892210">
+            <Button variant="secondary" icon={Phone} href="tel:+919898892210">
               Contact Now
             </Button>
           </div>
