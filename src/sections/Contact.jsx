@@ -43,9 +43,11 @@ export default function Contact() {
           <textarea className="field min-h-36 resize-none" placeholder="Message" aria-label="Message" />
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button type="button" icon={Send}>Submit Inquiry</Button>
-            <Button type="button" variant="secondary" icon={MessageCircle} href="https://wa.me/919898892210" target="_blank">
-              WhatsApp Direct
-            </Button>
+            <a href="https://wa.me/919898892210" target="_blank" rel="noopener noreferrer">
+  <Button variant="secondary" icon={MessageCircle}>
+    Chat on WhatsApp
+  </Button>
+</a>
           </div>
         </form>
       </div>
