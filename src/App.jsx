@@ -15,6 +15,7 @@ import Contact from './sections/Contact.jsx';
 import Footer from './sections/Footer.jsx';
 import useLenis from './hooks/useLenis.js';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
@@ -45,6 +46,21 @@ export default function App() {
       <ScrollProgress />
       <CursorGlow />
       <Navbar />
+      <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Maa Durga Security Services",
+          url: "https://maadurgass.in",
+          founder: {
+            "@type": "Person",
+            name: "Devendra Mishra"
+          }
+        })
+      }}
+    />
       <main>
         <Hero />
         <About />
