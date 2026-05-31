@@ -9,19 +9,21 @@
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "tailwindcss": "latest",
     "@tailwindcss/vite": "latest",
+    "@vitejs/plugin-react": "latest",
     "framer-motion": "latest",
     "gsap": "latest",
     "lenis": "latest",
     "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "react-icons": "latest",
+    "tailwindcss": "latest",
+    "three": "latest",
     "typed.js": "latest",
-    "three": "latest"
+    "vite": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "vite-plugin-sitemap": "^0.8.2"
+  }
 }
