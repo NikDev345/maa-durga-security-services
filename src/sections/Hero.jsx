@@ -26,7 +26,9 @@ export default function Hero() {
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
             <Button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}>Get Free Consultation</Button>
-            <Button variant="secondary" icon={Phone}>Contact Now</Button>
+            <Button variant="secondary" icon={Phone} href="tel:+91-9898892210">
+              Contact Now
+            </Button>
           </div>
           <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm font-semibold text-zinc-200">
             <span className="flex items-center gap-2"><BadgeCheck className="h-5 w-5 text-amber-300" /> Verified Personnel</span>
