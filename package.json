@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "latest",
+    "@vercel/speed-insights": "^2.0.0",
     "@vitejs/plugin-react": "latest",
     "framer-motion": "latest",
     "gsap": "latest",
