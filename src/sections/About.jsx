@@ -10,7 +10,7 @@ return ( <section id="about" className="section-shell relative"> <div className=
          loading="lazy"
        />
 
-```
+
       <div className="absolute bottom-5 left-5 right-5 rounded-sm border border-amber-300/25 bg-black/70 p-5 backdrop-blur-xl">
         <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-300">
           Founder / Owner
