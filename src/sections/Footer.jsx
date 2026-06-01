@@ -26,7 +26,7 @@ export default function Footer() {
       </div>
       <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-center text-xs uppercase tracking-[0.22em] text-zinc-600">
         Copyright 2026 MAA DURGA SECURITY SERVICES. All Rights Reserved.
-        Created by <a href="https://www.example.com" className="text-amber-300 hover:text-amber-400" target="_blank" rel="noopener noreferrer">Nagraj Rangrej</a>
+        Created by <a href="https://www.example.com" className="text-amber-300 hover:text-amber-400" target="_blank" rel="noopener noreferrer">Nagraj Rangarej</a>
       </div>
     </footer>
   );
