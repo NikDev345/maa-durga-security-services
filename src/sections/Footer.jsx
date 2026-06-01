@@ -10,7 +10,7 @@ export default function Footer() {
           <img src={logo} alt="MAA DURGA Security Service logo" className="h-48 w-48 object-contain sm:h-56 sm:w-56" loading="lazy" />
           <p className="mt-2 max-w-sm text-sm leading-7 text-zinc-500">Premium professional security services for Surat, Gujarat and surrounding business regions.</p>
         </div>
-        <FooterList title="Quick Links" items={navLinks.map((link) => link.label)} />
+        <FooterList title="Quick Links" items={navLinks} />
         <FooterList title="Services" items={services.slice(0, 7).map((service) => service.title)} />
         <div>
           <h3 className="footer-title">Connect</h3>
@@ -37,7 +37,13 @@ function FooterList({ title, items }) {
     <div>
       <h3 className="footer-title">{title}</h3>
       <ul className="mt-4 space-y-2 text-sm text-zinc-500">
-        {items.map((item) => <li key={item}>{item}</li>)}
+        {items.map((item) => (
+          <li key={typeof item === 'string' ? item : item.href}>
+            {typeof item === 'string' ? item : (
+              <a href={item.href} className="transition hover:text-amber-300">{item.label}</a>
+            )}
+          </li>
+        ))}
       </ul>
     </div>
   );

@@ -7,7 +7,6 @@ import {
   Castle,
   ClipboardCheck,
   Clock3,
-  Crosshair,
   Eye,
   Factory,
   Handshake,
@@ -17,8 +16,6 @@ import {
   LockKeyhole,
   Radio,
   School,
-  Shield,
-  ShieldCheck,
   Siren,
   Star,
   UserCheck,
@@ -31,10 +28,9 @@ export const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Why Us', href: '#why-us' },
   { label: 'Process', href: '#process' },
+  { label: 'Join Us', href: '#join-us' },
   { label: 'Contact', href: '#contact' },
 ];
-
-export const heroPills = ['Armed Security', 'Industrial Protection', 'VIP Security', 'CCTV Monitoring', 'Event Security', 'Corporate Security'];
 
 export const heroCards = [
   { label: '24/7 Protection', icon: Clock3 },
@@ -92,6 +88,6 @@ export const starIcons = Array.from({ length: 5 }, (_, index) => ({ id: index, I
 export const contactDetails = [
   { label: 'Office', value: 'pashupati Textiles , Market 3 parking , Nr. Shara Darwaja , Surat, Gujarat, India', icon: Building2 },
   { label: 'Phone', value: '+91 9879323700 , +91 9898892210', icon: Siren },
-  { label: 'Email', value: 'prajjwalmishra@gmail.com', icon: ClipboardCheck },
+  { label: 'Email', value: 'prajjwalmishra227@gmail.com', icon: ClipboardCheck },
   { label: 'Hours', value: '24/7 Operations Desk', icon: HeartPulse },
 ];

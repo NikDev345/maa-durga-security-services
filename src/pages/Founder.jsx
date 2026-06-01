@@ -1,3 +1,5 @@
+import founderImage from '../assets/devendra-mishra-founder.jpeg';
+
 export default function Founder() {
   return (
     <div className="min-h-screen bg-white px-6 py-20">
@@ -7,12 +9,12 @@ export default function Founder() {
         </h1>
 
         <p className="mb-4 text-xl text-gray-600">
-          Founder & Director
+          Founder & Owner
         </p>
 
         <img
-          src="/founder.jpg"
-          alt="Devendra Mishra"
+          src={founderImage}
+          alt="Devendra Mishra, Founder & Owner of Maa Durga Security Services"
           className="mb-8 h-96 w-full rounded-lg object-cover"
         />
 

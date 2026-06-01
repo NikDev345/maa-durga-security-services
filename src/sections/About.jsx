@@ -1,11 +1,11 @@
 import { Award, Medal, ShieldCheck } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader.jsx';
-import cofounderImage from '../assets/dependra-mishra-cofounder.jpeg';
+import founderImage from '../assets/devendra-mishra-founder.jpeg';
 
 export default function About() {
 return ( <section id="about" className="section-shell relative"> <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8"> <div className="reveal-up relative"> <img
-         src={cofounderImage}
-         alt="Devendra Mishra, Founder and Owner of Maa Durga Security Services"
+         src={founderImage}
+         alt="Devendra Mishra, Founder & Owner of Maa Durga Security Services"
          className="aspect-[4/5] w-full rounded-sm border border-white/10 object-cover object-center shadow-[0_30px_100px_rgba(0,0,0,0.45)]"
          loading="lazy"
        />
@@ -13,7 +13,7 @@ return ( <section id="about" className="section-shell relative"> <div className=
 
       <div className="absolute bottom-5 left-5 right-5 rounded-sm border border-amber-300/25 bg-black/70 p-5 backdrop-blur-xl">
         <p className="text-xs font-bold uppercase tracking-[0.28em] text-amber-300">
-          Founder / Owner
+          Founder & Owner
         </p>
 
         <h3 className="mt-2 font-display text-2xl font-black uppercase text-white">
