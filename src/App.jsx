@@ -23,9 +23,11 @@ export default function App() {
   useLenis();
 
   useEffect(() => {
+    let observer;
+
     const ctx = gsap.context(() => {
       const registerReveal = (element) => {
-        if (element.dataset.revealRegistered) return;
+        if (element.dataset.revealRegistered) return false;
         element.dataset.revealRegistered = 'true';
 
         gsap.fromTo(
@@ -39,30 +41,44 @@ export default function App() {
             scrollTrigger: { trigger: element, start: 'top 86%' },
           },
         );
+
+        return true;
       };
 
       const registerReveals = (root = document) => {
-        if (root.matches?.('.reveal-up')) registerReveal(root);
-        root.querySelectorAll?.('.reveal-up').forEach(registerReveal);
+        let registered = false;
+
+        if (root.matches?.('.reveal-up')) registered = registerReveal(root) || registered;
+        root.querySelectorAll?.('.reveal-up').forEach((element) => {
+          registered = registerReveal(element) || registered;
+        });
+
+        return registered;
       };
 
       registerReveals();
 
-      const observer = new MutationObserver((mutations) => {
+      observer = new MutationObserver((mutations) => {
+        let registered = false;
+
         mutations.forEach((mutation) => {
           mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) registerReveals(node);
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              registered = registerReveals(node) || registered;
+            }
           });
         });
-        ScrollTrigger.refresh();
+
+        if (registered) ScrollTrigger.refresh();
       });
 
       observer.observe(document.body, { childList: true, subtree: true });
-
-      return () => observer.disconnect();
     });
 
-    return () => ctx.revert();
+    return () => {
+      observer?.disconnect();
+      ctx.revert();
+    };
   }, []);
 
   return (
