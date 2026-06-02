@@ -33,8 +33,11 @@ export default function Contact() {
     setStatus({ type: 'idle', message: '' });
 
     try {
-      await sendEmail('VITE_EMAILJS_INQUIRY_TEMPLATE_ID', {
+      await sendEmail({
         subject: 'New Security Service Inquiry',
+        form_type: 'Security Service Inquiry',
+        from_name: form.name,
+        reply_to: form.email,
         ...form,
       });
       setForm(initialForm);

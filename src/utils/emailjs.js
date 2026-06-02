@@ -1,15 +1,15 @@
 const destinationEmail = 'prajjwalmishra227@gmail.com';
 
-function getEmailConfig(templateKey) {
+function getEmailConfig() {
   return {
     publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
     serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    templateId: import.meta.env[templateKey],
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
   };
 }
 
-export async function sendEmail(templateKey, templateParams) {
-  const config = getEmailConfig(templateKey);
+export async function sendEmail(templateParams) {
+  const config = getEmailConfig();
 
   if (!config.publicKey || !config.serviceId || !config.templateId) {
     throw new Error('EmailJS is not configured. Please add the required environment variables.');

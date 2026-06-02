@@ -35,8 +35,21 @@ export default function JoinUs() {
     setStatus({ type: 'idle', message: '' });
 
     try {
-      await sendEmail('VITE_EMAILJS_APPLICATION_TEMPLATE_ID', {
+      await sendEmail({
         subject: 'New Security Guard Application',
+        form_type: 'Security Guard Application',
+        name: form.full_name,
+        phone: form.mobile_number,
+        message: [
+          `Full Name: ${form.full_name}`,
+          `Mobile Number: ${form.mobile_number}`,
+          `Age: ${form.age}`,
+          `Address: ${form.address}`,
+          `Education: ${form.education}`,
+          `Experience: ${form.experience}`,
+          `Preferred Work Location: ${form.preferred_location}`,
+          `Additional Information: ${form.additional_information || 'Not provided'}`,
+        ].join('\n'),
         ...form,
       });
       setForm(initialForm);
